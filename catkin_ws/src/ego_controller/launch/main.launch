@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="ego_controller" name="talker" type="talker" output="screen" />
+    <node pkg="ego_controller" name="listener" type="listener" output="screen" />
+</launch>
