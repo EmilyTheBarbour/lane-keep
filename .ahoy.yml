@@ -1,1 +1,8 @@
-# sudo wget -q https://github.com/devinci-code/ahoy/releases/download/1.1.0/ahoy-`uname -s`-amd64 -O /usr/local/bin/ahoy && sudo chown $USER /usr/local/bin/ahoy && chmod +x /usr/local/bin/ahoy
+# sudo wget -q https://github.com/devinci-code/ahoy/releases/download/2.0.0/ahoy-`uname -s`-amd64 -O /usr/local/bin/ahoy && sudo chown $USER /usr/local/bin/ahoy && chmod +x /usr/local/bin/ahoy
+
+ahoyapi: v2
+commands:
+    run-ci-container:
+      cmd: |
+        docker build --no-cache -t lane-keep:latest .
+        docker run --it -rm lane-keep:latest
